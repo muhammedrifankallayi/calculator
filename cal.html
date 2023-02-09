@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+  <form id="myform" action="https://script.google.com/macros/s/AKfycbxB6ueMxtKZPbL-YJfuOOkdx5rh56fCCAEXYMTJFj0OYZnDIGJa_drYIwX8h58XHrWv/exec" method="post">
+    <h1>Love Calculator</h1>
+    <label for="fname">Your Name:</label>
+    <input type="text" id="fname" name="fname" required><br><br>
+    <label for="lname">Lover Name:</label>
+    <input type="text" id="lname" name="lname" required><br><br>
+    <p id="fullName"> </p>
+    <p id="percentage"> </p>
+    <button  onclick="setRandomPercentage()" type="submit">Answer</button>
+    <script src="cal.css"></script>
+  </form>
+  
+
+
+
+
+  <p id="percentage"></p>
+
+  <script>
+    const percentageElement = document.querySelector("#percentage");
+    
+    function setRandomPercentage() {
+      const randomPercentage = Math.floor(Math.random() * 100) + "% love";
+      percentageElement.textContent = randomPercentage;
+    }
+    
+   
+  </script>
+  
+
+</body>
+</html>
